@@ -1,8 +1,9 @@
 #Levi Muniz
 #Morgan Brown
 #Jason Walker
+#Casey Freeburg
+#Levi Muniz
 
->>>>>>> Stashed changes
 import socket, threading
 
 port = 50708
