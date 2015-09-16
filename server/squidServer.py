@@ -11,6 +11,8 @@ Something VERY experimental
 
 import socket, threading
 
+print ("Welcome to Squid - server")
+
 port = 50708
 threadNumber = 10
 killTerm = False
