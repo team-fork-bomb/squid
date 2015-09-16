@@ -1,10 +1,8 @@
 #Team Fork Bomb
-#Levi Muniz
 #Morgan Brown
-#Jason Walker
 #Casey Freeburg
 #Levi Muniz
-
+#Jason Walker
 '''
 Something VERY experimental
 '''
