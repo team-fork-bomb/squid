@@ -1,6 +1,6 @@
 #Team Fork Bomb
 
-#Casey Freeburg#Jason Walker#Levi Muniz#Morgan Brown#Nicholas Coiner
+#Casey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner
 
 
 '''
