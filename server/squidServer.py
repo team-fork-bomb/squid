@@ -11,7 +11,7 @@ import socket, threading
 
 print ("Welcome to Squid - server")
 
-port = 50708
+port = 50709
 threadNumber = 10
 killTerm = False
 Threads = []
