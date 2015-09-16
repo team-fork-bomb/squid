@@ -1,6 +1,6 @@
 #Team Fork Bomb
-#Casey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner
-v = Casey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner
+#Morgan Brown, Nicholas Coiner, Casey Freeburg, Levi Muniz, Jason Walker
+v = "Team Fork Bomb\nMorgan Brown, Nicholas Coiner, Casey Freeburg, Levi Muniz, Jason Walker"
 print(v)
 
 '''
