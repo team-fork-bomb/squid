@@ -1,7 +1,7 @@
 #Team Fork Bomb
 
-#Casey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner
-
+v = Casey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner
+print(v)
 
 '''
 Something VERY experimental
