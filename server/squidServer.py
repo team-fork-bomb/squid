@@ -15,6 +15,7 @@ port = 50709
 threadNumber = 10
 killTerm = False
 Threads = []
+VM = ["Anime 404.mp4","binary1600.jpg"]
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(("", port))
@@ -31,10 +32,14 @@ def clientConn():
 			addr = None
 			port = None
 			print("\033[1;32mConnection established with: " + ip + "\033[0m")
-			f = open("binary1600.jpg", "r")
-			data = f.read()
-			f.close()
-			c.send(data)
+			cli_data = s.recv(1024)
+			try:
+			    f = open(VM[int(cli_data)], "r")
+			    data = f.read()
+			    f.close()
+			    c.send(data)
+			except:
+			    c.send("Recieved a request that the server could not understand.")
 
 try:
 	for i in range (threadNumber):
