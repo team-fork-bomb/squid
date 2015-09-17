@@ -32,7 +32,7 @@ def clientConn():
 			addr = None
 			port = None
 			print("\033[1;32mConnection established with: " + ip + "\033[0m")
-			cli_data = s.recv(1024)
+			cli_data = c.recv(1024)
 			try:
 			    f = open(VM[int(cli_data)], "r")
 			    data = f.read()
