@@ -32,13 +32,15 @@ def clientConn():
 			print("\033[1;32mConnection established with: " + ip + "\033[0m")
 			cli_data = c.recv(1024)
 			try:
-			    FileSize = os.path.getsize(VM[int(cli_data)])
-			    loops = x/1024
-			    rem = x%1024
-			    f = open(VM[int(cli_data)], "r")
-			    data = f.read()
-			    f.close()
-			    c.send(data)
+				x = os.path.getsize(VM[int(cli_data)])
+				loops = x/1024
+				rem = x%1024
+				f = open(VM[int(cli_data)], "r")
+				for i in range(loops):
+					f.seek(1024,1)
+					data = f.read()
+			        f.close()
+			        c.send(data)
 			except:
 			    c.send("Recieved a request that the server could not understand.")
 
