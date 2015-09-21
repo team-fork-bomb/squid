@@ -3,10 +3,6 @@
 v = "Team Fork Bomb\nCasey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner"
 print(v)
 
-'''
-Something VERY experimental
-'''
-
 import socket, threading
 
 print ("Welcome to Squid - server")
