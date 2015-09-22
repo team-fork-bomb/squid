@@ -46,9 +46,9 @@ def clientConn():
 				data = f.read(rem)
 				f.send(data)
 				f.close()
-			    c.send(data)
+				c.send(data)
 			except:
-			    c.send("Recieved a request that the server could not understand.")
+				c.send("Recieved a request that the server could not understand.")
 
 try:
 	for i in range (threadNumber):
