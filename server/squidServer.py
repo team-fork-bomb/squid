@@ -41,10 +41,12 @@ def clientConn():
 				rem = x%1024
 				f = open(VM[int(cli_data)], "r")
 				for i in range(loops):
+					data = f.read(1024)
 					f.seek(1024,1)
-					data = f.read()
-			        f.close()
-			        c.send(data)
+				data = f.read(rem)
+				f.send(data)
+			    f.close()
+			    c.send(data)
 			except:
 			    c.send("Recieved a request that the server could not understand.")
 
