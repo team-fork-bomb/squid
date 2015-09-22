@@ -45,7 +45,7 @@ def clientConn():
 					f.seek(1024,1)
 				data = f.read(rem)
 				f.send(data)
-			    f.close()
+				f.close()
 			    c.send(data)
 			except:
 			    c.send("Recieved a request that the server could not understand.")
