@@ -1,15 +1,9 @@
 
 #Team Fork Bomb
 #Morgan Brown, Nicholas Coiner, Casey Freeburg, Levi Muniz, Jason Walker
-import os
+import os, socket, threading
 v = "Team Fork Bomb\nCasey Freeburg, Jason Walker, Levi Muniz, Morgan Brown, Nicholas Coiner"
 print(v)
-
-'''
-Something VERY experimental
-'''
-
-import socket, threading
 
 print ("Welcome to Squid - server")
 
@@ -39,14 +33,14 @@ def clientConn():
 				x = os.path.getsize(VM[int(cli_data)])
 				loops = x/1024
 				rem = x%1024
-				f = open(VM[int(cli_data)], "r")
+				f = open(VM[int(cli_data)], "rb")
 				for i in range(loops):
 					data = f.read(1024)
-					f.seek(1024,1)
+					c.send(data)
+					c.recv(1024)
 				data = f.read(rem)
-				f.send(data)
-				f.close()
 				c.send(data)
+				f.close()
 			except:
 				c.send("Recieved a request that the server could not understand.")
 
