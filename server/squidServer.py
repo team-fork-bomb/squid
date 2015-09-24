@@ -11,7 +11,7 @@ port = 50709
 threadNumber = 10
 killTerm = False
 Threads = []
-VM = ["Anime 404.mp4","binary1600.jpg"]
+VM = []
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(("", port))
