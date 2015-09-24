@@ -37,7 +37,6 @@ def clientConn():
 				for i in range(loops):
 					data = f.read(1024)
 					c.send(data)
-					c.recv(1024)
 				data = f.read(rem)
 				c.send(data)
 				f.close()
