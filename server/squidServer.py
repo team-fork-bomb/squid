@@ -30,8 +30,8 @@ def clientConn():
 			cli_data = c.recv(1024)
 			try:
 				x = os.path.getsize(VM[int(cli_data)])
-				c.send(x)
 				c.send(VM[int(cli_data)])
+				c.send(x)
 				loops = x/1024
 				rem = x%1024
 				f = open(VM[int(cli_data)], "rb")
