@@ -1,4 +1,3 @@
-
 #Team Fork Bomb
 #Morgan Brown, Nicholas Coiner, Casey Freeburg, Levi Muniz, Jason Walker
 import os, socket, threading
@@ -31,18 +30,21 @@ def clientConn():
 			cli_data = c.recv(1024)
 			try:
 				x = os.path.getsize(VM[int(cli_data)])
+				c.send(x)
+				c.send(VM[int(cli_data)])
 				loops = x/1024
 				rem = x%1024
 				f = open(VM[int(cli_data)], "rb")
+				c.send("BOF")
 				for i in range(loops):
 					data = f.read(1024)
 					c.send(data)
 				data = f.read(rem)
 				c.send(data)
+				c.send("EOF")
 				f.close()
 			except:
 				c.send("Recieved a request that the server could not understand.")
-
 try:
 	for i in range (threadNumber):
 		connThread = threading.Thread(target=clientConn)
