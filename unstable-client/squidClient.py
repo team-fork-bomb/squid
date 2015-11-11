@@ -4,9 +4,15 @@ import socket, loadingBar
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s.connect(("10.21.1.222", 50709))
+s.connect(("127.0.0.1", 50709))
 print("Connected")
-s.send("0")
+s.send("kali-linux-1.0.6-i386.iso")
+
+'''
+theList = s.recv(1024)
+print(theList)
+'''
+
 name = s.recv(1024)
 s.send("I'm ready!")
 size = int(s.recv(1024))
